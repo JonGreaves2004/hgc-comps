@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 255 255 255;
+  --fg: 15 23 42;
+}
+
+html, body { height: 100%; }
+
+body {
+  @apply antialiased bg-white text-slate-900;
+}
+
+.container-prose {
+  @apply max-w-3xl mx-auto px-4 sm:px-6 md:px-8;
+}
+.print-only { display: none; }
+@media print {
+  .no-print { display:none !important; }
+  .print-only { display:block !important; }
+}
